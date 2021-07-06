@@ -1,24 +1,159 @@
+@font-face {
+    font-family: 'patate' ;
+    src: url('../font/OtomanopeeOne-Regular.ttf');
+}
+
+/* Reset du CSS */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 html, body {
-    width: 100vw;
+    width: 99vw;
     height: 100vh;
+    background-color: #FDFFF1;
+    
 }
 
+/* Exercice 1 : Header */
 header {
+    height: 50%;
+    /* ajout de l'image de fond */
     background-image: url('../img/header.jpg');
-    display: flex;
+    background-size: cover;
     background-repeat: no-repeat;
-    justify-content: center;
-    align-items: center;
+    /* position du texte h1 */
+    display: flex;
+    justify-content: center; /*alignement horizontal */
+    align-items: center; /* alignement vertical */
+    font-family: 'Dancing Script';
 
 }
 
 h1 {
-    font-family: 'Times New Roman', Times, serif;
-    background-color: red;
     
+     font-size: 5rem; /* taille du titre */
 }
+
+a{
+    text-decoration: none;
+    font-size: 2rem;
+    display: flex;
+    padding: 1em;
+    color: #94CCE7;
+    border: 0 4px 0 4px solid white;
+}
+
+li a:hover{ /* survol*/
+background-color:#81B3D4;
+color: black;
+}
+
+.barre {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #EBD5A8;
+}
+#searchForm input{
+    padding: 5px;
+    border: #81B3D4;
+    border-radius: 2px;
+}
+
+/* Exercice 2 Fin de navigation*/
+/* Exercice3 : Presentation */
+
+section#presentation { /* exercice 3 texte de presentation*/
+    margin: 50px 0;
+    padding: 0 250px;
+    display: flex;
+    justify-content: center;
+    
+    font-family: 'patate', cursive;
+    font-size: 1rem;
+}
+#presentation p{
+    background-color: #EBD5A8;
+    padding: 30px;
+    text-align: justify;
+}
+p { /* espace entre paragraphe*/
+    margin: 0 2rem 2rem 2rem;
+}
+/* Exercice3 : Fin Presentation */
+.container {
+    display: flex;
+    align-items: center;
+
+
+}
+
+#container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    
+    
+} 
+
+.container-bloc-1 {
+    display: flex;
+    width: 30%;
+    height: 30%;
+    flex-direction: column;
+    text-align: justify;
+
+}
+
+.container-bloc-2 {
+    display: flex;
+    width: 30%;
+    height: 30%;
+    flex-direction: column;
+    text-align: justify;
+
+}
+
+.container-bloc-3 {
+    display: flex;
+    width: 30%;
+    height: 30%;
+    flex-direction: column;
+    text-align: justify;
+
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Dancing Script';
+    background-color: #EBD5A8;
+    font-size: 3rem;
+    padding: 0.5em;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+#container p {
+    font-size: 1rem;
+    font-family: 'patate', cursive;
+    background-color: #81B3D4;
+    border-radius: 10px;
+    padding: 1em;
+    margin: 5px;
+}
+
+img {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+h2:hover{ /* survol*/
+    background-color:#81B3D4;
+    color: #EBD5A8;
+    }
