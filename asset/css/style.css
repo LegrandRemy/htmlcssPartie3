@@ -1,6 +1,8 @@
 @font-face {
-    font-family: 'patate' ;
+    font-family: 'patate';
+    /* on définit le nom de la police (choix du nom libre) qu'on utilisera par la suite */
     src: url('../font/OtomanopeeOne-Regular.ttf');
+    /* on définit l'emplacement de notre police */
 }
 
 /* Reset du CSS */
@@ -9,11 +11,13 @@
     margin: 0;
     box-sizing: border-box;
 }
-html, body {
-    width: 99vw;
+
+html,
+body {
+    width: 100vw;
     height: 100vh;
     background-color: #FDFFF1;
-    
+    overflow-x: hidden; /* Enlever le scroll horizontal */
 }
 
 /* Exercice 1 : Header */
@@ -25,18 +29,20 @@ header {
     background-repeat: no-repeat;
     /* position du texte h1 */
     display: flex;
-    justify-content: center; /*alignement horizontal */
-    align-items: center; /* alignement vertical */
+    justify-content: center;
+    /*alignement horizontal */
+    align-items: center;
+    /* alignement vertical */
     font-family: 'Dancing Script';
-
 }
 
 h1 {
-    
-     font-size: 5rem; /* taille du titre */
+
+    font-size: 5rem;
+    /* taille du titre */
 }
 
-a{
+a {
     text-decoration: none;
     font-size: 2rem;
     display: flex;
@@ -45,9 +51,10 @@ a{
     border: 0 4px 0 4px solid white;
 }
 
-li a:hover{ /* survol*/
-background-color:#81B3D4;
-color: black;
+li a:hover {
+    /* survol*/
+    background-color: #81B3D4;
+    color: black;
 }
 
 .barre {
@@ -59,76 +66,63 @@ color: black;
     margin: 0;
     background-color: #EBD5A8;
 }
-#searchForm input{
+
+#searchForm input {
     padding: 5px;
-    border: #81B3D4;
-    border-radius: 2px;
+    border-color: #81B3D4;
+    border-radius: 5px;
+}
+/* Bonus: Utilisation du pseudo-élément ::placeholder pour définir le style du placeholder (ne s'applique pas au texte écrit par l'utilisateur) */
+#searchText::placeholder {
+    font-style: italic;
+    color: #83B4D5;
+}
+
+li:last-child {
+    display: none;
+    /*enlever menu burger du responsive*/
 }
 
 /* Exercice 2 Fin de navigation*/
 /* Exercice3 : Presentation */
 
-section#presentation { /* exercice 3 texte de presentation*/
+section#presentation {
+    /* exercice 3 texte de presentation*/
     margin: 50px 0;
     padding: 0 250px;
     display: flex;
     justify-content: center;
-    
+
     font-family: 'patate', cursive;
     font-size: 1rem;
 }
-#presentation p{
+
+#presentation p {
     background-color: #EBD5A8;
     padding: 30px;
     text-align: justify;
 }
-p { /* espace entre paragraphe*/
+
+p {
+    /* espace entre paragraphe*/
     margin: 0 2rem 2rem 2rem;
 }
-/* Exercice3 : Fin Presentation */
-.container {
-    display: flex;
-    align-items: center;
 
-
-}
-
-#container {
+#destination {
     display: flex;
     justify-content: space-around;
-    align-items: flex-start;
-    
-    
-} 
+}
 
-.container-bloc-1 {
+.box {
     display: flex;
     width: 30%;
     height: 30%;
     flex-direction: column;
-    text-align: justify;
-
+    text-align: center;
+    align-items: center;
 }
 
-.container-bloc-2 {
-    display: flex;
-    width: 30%;
-    height: 30%;
-    flex-direction: column;
-    text-align: justify;
-
-}
-
-.container-bloc-3 {
-    display: flex;
-    width: 30%;
-    height: 30%;
-    flex-direction: column;
-    text-align: justify;
-
-}
-
-h2 {
+.box h2 {
     text-align: center;
     font-family: 'Dancing Script';
     background-color: #EBD5A8;
@@ -136,9 +130,10 @@ h2 {
     padding: 0.5em;
     border-radius: 10px;
     margin: 5px;
+    /* margin : y x */
 }
 
-#container p {
+#destination p {
     font-size: 1rem;
     font-family: 'patate', cursive;
     background-color: #81B3D4;
@@ -149,11 +144,70 @@ h2 {
 
 img {
     border-radius: 10px;
-    width: 100%;
-    height: 100%;
+    width: 97.5%;
+    height: 97.5%;
 }
 
-h2:hover{ /* survol*/
-    background-color:#81B3D4;
+h2:hover {
+    /* survol*/
+    background-color: #81B3D4;
     color: #EBD5A8;
+}
+
+img:hover {
+    background-color: black;
+}
+
+/*------ Fin exercice 4 ---------*/
+
+/*------ exercice bonus : responsive version tablette---------*/
+@media screen and (max-width: 768px) {
+    header {
+        height: 20%;
     }
+    section#presentation {
+        /* exercice 3 texte de presentation*/
+        margin: 20px 0;
+        padding: 0 100px;
+    }
+
+    /*------ exercice bonus : FIN responsive version tablette---------*/
+
+    /*------ exercice bonus : responsive version téléphone---------*/
+
+    @media screen and (max-width: 480px) {
+
+        /*------navigation-----*/
+        li:not(:last-child) a,
+        li form {
+            display: none;
+        }
+
+        li:last-child {
+            display: flex;
+            /*afficher menu burger du responsive*/
+
+        }
+
+        /*------Fin navigation-----*/
+        /*------presentation-----*/
+        section#presentation {
+            /* exercice 3 texte de presentation*/
+            margin: 20px 0;
+            padding: 0 10px;
+
+        }
+
+        /*------Fin presentation-----*/
+
+        #destination {
+            flex-wrap: wrap;
+        }
+
+        .box {
+            width: 100vw;
+            margin-bottom: 40px;
+        }
+    }
+
+    /*------ Fin exercice bonus : responsive téléphone ---------*/
