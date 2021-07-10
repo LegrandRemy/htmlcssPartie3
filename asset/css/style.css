@@ -268,12 +268,20 @@ label {
     font-family: 'Dancing Script'
 }
 
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    background-color: #81B3D4;
+    color: #ffffff;
+}
+
 
 
 /*------ exercice bonus : responsive version tablette---------*/
 @media screen and (max-width: 768px) {
     header {
-        height: 20%;
+        height: 30%;
     }
 
     section#presentation {
