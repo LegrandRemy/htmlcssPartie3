@@ -137,17 +137,35 @@
                 <label for="fname">Nom & prénom</label>
                 <input type="text" id="fname" name="firstname" placeholder="Votre nom et prénom">
 
+
                 <label for="meeting-time">Periodes</label> </br></br>
                 <label for="meeting-time">Choisir une date d'arrivée: </label></br>
 
                 <input type="datetime-local" id="meeting-time" name="meeting-time" value="2021-07-15T19:30"
                     min="2021-07-15T00:00" max="2021-12-31T00:00">
-                </select></br></br>
+
+                <label class="number" for="nombre">Nombre d'adultes</label>
+                <select  name="nombre">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+
+                </select></br>
+                <label class="numberchild" for="nombre">Nombre d'enfants</label>
+                <select  name="nombre">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+
+                </select>
+                </br>
                 <label for="meeting-time">Choisir une date de départ: </label></br>
 
                 <input type="datetime-local" id="meeting-time" name="meeting-time" value="2021-07-15T19:30"
                     min="2021-07-15T00:00" max="2021-12-31T00:00">
-                </select></br></br>
+
+                
+                </br></br>
 
 
                 <label for="emailAddress">Email</label>
@@ -197,10 +215,9 @@
 
     <div id="scroll_to_top">
         <a href="#top"><img src="asset/img/top-100x100.png"> </a>
-    </div 
-</body>
+    </div </body>
     <footer>
-        <p>© 2018 LEGRAND Rémy</p> 
+        <p>© 2018 LEGRAND Rémy</p>
 
     </footer>
 

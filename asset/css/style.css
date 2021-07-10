@@ -251,6 +251,19 @@ label {
     padding: 15px;
 }
 
+.number {
+    margin-left: 300px;
+}
+
+.numberchild {
+    margin-left: 480px;
+}
+
+#meeting-time {
+    grid-column: 1
+}
+
+
 .container {
     border-radius: 5px;
     padding: 20px;
