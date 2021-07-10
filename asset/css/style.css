@@ -280,6 +280,13 @@ footer {
 
 /*------ exercice bonus : responsive version tablette---------*/
 @media screen and (max-width: 768px) {
+
+    h1 {
+        padding: 5px;
+        font-size: 4rem;
+        /* taille du titre */
+    }
+
     header {
         height: 30%;
     }
@@ -295,6 +302,13 @@ footer {
     /*------ exercice bonus : responsive version téléphone---------*/
 
     @media screen and (max-width: 480px) {
+
+        h1 {
+            padding: 5px;
+            font-size: 4rem;
+            /* taille du titre */
+        }
+
         header {
             height: 30%;
         }
