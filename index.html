@@ -19,19 +19,20 @@
 </head>
 
 <body>
+    <div id="top"></div>
     <!-- Exercice 1 : Header -->
     <header>
+        
         <h1>Voyage & Co</h1>
-
     </header>
     <!--Exercice 1 : Fin header -->
     <!--Exercice 2 : barre de navigation-->
     <nav>
-        <ul class="barre">
-            <li class="navitem"><a href="#">Accueil</a></li>
+        <ul id="barre">
+            <li class="navitem"><a href="#presentation">Accueil</a></li>
             <li class="navitem"><a href="#destination">Destinations</a></li>
-            <li class=navitem><a href="#">Réservations</a></li>
-            <li class="navitem"><a href="#">Contact</a></li>
+            <li class=navitem><a href="#reservation">Réservations</a></li>
+            <li class="navitem"><a href="#contact">Contact</a></li>
 
             <li>
                 <form action="#" method="GET" id="searchForm">
@@ -124,6 +125,79 @@
     </div>
     <!-- Fin Exercice4 : bloc-->
     <script src="https://kit.fontawesome.com/d38cea82af.js" crossorigin="anonymous"></script>
-</body>
+
+    <!-- Bonus personnel-->
+
+    <!-- Formulaire de réservation-->
+    <div class="container">
+        <p>Réservation</p>
+        <form method="POST" action="">
+            <fieldset id="reservation">
+                <legend class="legend">FORMULAIRE DE RESERVATION</legend>
+                <label for="fname">Nom & prénom</label>
+                <input type="text" id="fname" name="firstname" placeholder="Votre nom et prénom">
+
+                <label for="meeting-time">Periodes</label> </br></br>
+                <label for="meeting-time">Choisir une date d'arrivée: </label></br>
+
+                <input type="datetime-local" id="meeting-time" name="meeting-time" value="2021-07-15T19:30"
+                    min="2021-07-15T00:00" max="2021-12-31T00:00">
+                </select></br></br>
+                <label for="meeting-time">Choisir une date de départ: </label></br>
+
+                <input type="datetime-local" id="meeting-time" name="meeting-time" value="2021-07-15T19:30"
+                    min="2021-07-15T00:00" max="2021-12-31T00:00">
+                </select></br></br>
+
+
+                <label for="emailAddress">Email</label>
+                <input id="emailAddress" type="email" name="email" placeholder="Votre email">
+
+
+                <label for="subject">Message informations supplementaires</label>
+                <textarea id="subject" name="subject" placeholder="Votre message" style="height:200px"></textarea>
+
+                <input type="submit" class="button" value="Envoyer"></br></br>
+            </fieldset>
+        </form>
+    </div>
+
+    <!--Fin  Formulaire de réservation-->
+    <!-- Formulaire de contact-->
+    <div class="container">
+        <p>Nous contacter</p>
+        <form method="POST" action="">
+            <fieldset id="contact">
+                <legend class="legend">FORMULAIRE DE CONTACT</legend>
+                <label for="fname">Nom & prénom</label>
+                <input type="text" id="fname" name="firstname" placeholder="Votre nom et prénom">
+
+                <label for="sujet">Sujet</label> </br>
+                <select id="subject1" name="sujet">
+                    <option value="reservation">Réservation</option>
+                    <option value="reclamation">Réclamations</option>
+                    <option value="information">Informations & aide</option>
+                </select>
+                <input type="text" id="sujet" name="sujet" placeholder="L'objet de votre message">
+
+                <label for="emailAddress">Email</label>
+                <input id="emailAddress" type="email" name="email" placeholder="Votre email">
+
+
+                <label for="subject">Message</label>
+                <textarea id="subject" name="subject" placeholder="Votre message" style="height:200px"></textarea>
+
+                <input type="submit" class="button" value="Envoyer"></br></br>
+
+
+            </fieldset>
+        </form>
+    </div>
+    <!-- Fin Formulaire de contact-->
+
+    <div id="scroll_to_top">
+        <a href="#top"><img
+            src="asset/img/top-100x100.png"> </a>
+    </div </body>
 
 </html>
