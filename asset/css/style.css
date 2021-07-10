@@ -360,6 +360,22 @@ footer {
             width: 100vw;
             margin-bottom: 40px;
         }
+        .number {
+            margin-left: 0px;
+        }
+        
+        .numberchild {
+            margin-left: 0px;
+        }
+        .container p {
+            font-size: 2rem;
+            color: #EBD5A8;
+            border-radius: 10px;
+            background-color: #81B3D4;
+            width: 20%;
+            text-align: center;
+            font-family: 'Dancing Script'
+        }
     }
 
     /*------ Fin exercice bonus : responsive téléphone ---------*/
